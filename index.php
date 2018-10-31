@@ -15,8 +15,12 @@ $f3->route('GET /page1', function (){
     echo $view->render('views/page1.html');
 });
 
-$f3->route('GET /page2/@param', function (){
-    echo '<h1>Git Lab: Page 2 is done.{{@param}}</h1>';
+$f3->route('GET /page2/@word/@count', function ($f3, $params){
+
+    for($i = 0; $i < $params['count']; $i++)
+    {
+        echo '<h2>'.$params['word'].'</h2>';
+    }
 
 });
 
