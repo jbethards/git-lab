@@ -1,0 +1,20 @@
+{
+  "name": "jbethards/355/git-lab",
+  "authors": [
+    {
+      "name": "Tina",
+      "email": "tostrander@greenriver.edu"
+    },
+    {
+      "name": "Alex ",
+      "email": "Alex@greenriver.edu"
+    },
+    {
+      "name": "Joseph",
+      "email": "Joseph@greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
