@@ -21,7 +21,14 @@ $f3->route('GET /page2/@word/@count', function ($f3, $params){
     {
         echo '<h2>'.$params['word'].'</h2>';
     }
+});
+$f3->route('GET /page3/@word/@count', function ($f3, $params){
 
+    echo '<h1>This is final Page 3! Here\'s your output.</h1>';
+    for($i = 0; $i < $params['count']; $i++)
+    {
+        echo '<div>'.$params['word'].'   </div>';
+    }
 });
 
 // Run fat free
