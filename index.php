@@ -5,17 +5,18 @@ $f3 = Base::instance();
 
 //Define a default route
 $f3->route('GET /', function (){
-    echo '<h1>Git Lab</h1>
-          <p>Hello from Joseph</p>'
-    ;
+    $view = new View();
+    echo $view->render('views/page1.html');
 });
 //Define a default route
 $f3->route('GET /page1', function (){
     echo '<h1>Git Lab: Page 1 is done.</h1>';
-
+    $view = new View();
+    echo $view->render('views/page1.html');
 });
-$f3->route('GET /page2', function (){
-    echo '<h1>Git Lab: Page 2 is done.</h1>';
+
+$f3->route('GET /page2/@param', function (){
+    echo '<h1>Git Lab: Page 2 is done.{{@param}}</h1>';
 
 });
 
